@@ -416,6 +416,9 @@
 
         // Gestisci scansione con successo
         function onScanSuccess(decodedText, decodedResult) {
+            // Ferma immediatamente lo scanner
+            stopScanner();
+            
             resultDiv.className = 'success';
             
             // Controlla se è un URL
